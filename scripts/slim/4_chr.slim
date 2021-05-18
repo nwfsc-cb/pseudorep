@@ -1,0 +1,34 @@
+initialize() {
+ initializeTreeSeq();
+ initializeSex("A");
+
+ initializeMutationRate(0);
+ initializeMutationType("m1", 0.5, "f", 0.0);
+ initializeGenomicElementType("g1", m1, 1.0);
+ initializeGenomicElement(g1, 0, length);
+
+ rates = c(1e-08, 0.5, 1e-08, 0.5, 1e-08, 0.5, 1e-08);
+ ends = c(50e6-1,50e6,100e6-1,100e6,150e6-1,150e6,200e6-1);
+ initializeRecombinationRate(rates, ends);
+}
+
+
+1 late() {
+sim.addSubpop('p0', diploid_size);
+sim.rescheduleScriptBlock(s1, start=10*diploid_size, end=10*diploid_size);
+sim.rescheduleScriptBlock(s2, start=10*diploid_size+fwd_gen, end=10*diploid_size+fwd_gen);
+}
+
+s1 1000000 late() {
+	sim.treeSeqSimplify();
+	sim.addSubpopSplit(1, diploid_size, p0);
+	sim.addSubpopSplit(2, diploid_size, p0);
+	sim.addSubpopSplit(3, diploid_size, p0);
+	sim.addSubpopSplit(4, diploid_size, p0);
+	p0.setSubpopulationSize(0);
+}
+
+s2 1000001 late() {
+		 sim.treeSeqOutput(outname);
+		 sim.simulationFinished();
+}

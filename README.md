@@ -28,8 +28,8 @@ TriangleNe.R – This code simulates the kind of data used for Figure S8.
 ReadFst.R – This code reads in files with the same format as FstNe200.csv and computes nprime for each scenario.
 
 ReadLD.R – This code reads in genotype files in the format of ‘Ne_200.PED_0.CHR_64.NPOP_4.MUT_1.SINGLEPOP_1.ts.geno’ and computes nprime.  This code also reads in the associated ‘ts.chrom_counts’ files, which allow it to compute nprime when restricting comparisons to pairs of loci on different chromosomes.
+
 JackLD.R – This code reads in the same pairs of files as does ‘ReadLD.R’, generates new samples, and for each sample computes mean r2 and estimated effective degrees of freedom, using the Jones et al. jackknife method implemented in NeEstimator.    
 
- 
 ![image](https://user-images.githubusercontent.com/5046884/121273730-c1092000-c87d-11eb-99d1-b7463425febb.png)
 

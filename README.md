@@ -33,3 +33,4 @@ JackLD.R – This code reads in the same pairs of files as does ‘ReadLD.R’, 
 
 FstFitting.R contains an example of iterating over multiple model forms to identify the most parsimonious model
 
+LDFitting.R contains an example of iterating over multiple model forms to identify the most parsimonious model for the LD analyses

@@ -12,7 +12,7 @@ FstNe200.csv – This is an example output file for simulations for Fst with Ne 
 Ne_200.PED_0.CHR_64.NPOP_4.MUT_1.SINGLEPOP_1.ts.geno – This file is an example of simulated genotypes (50K loci for Ne = 200 individuals) that are read in by the file ReadLD.R and used to compute nprime for LD.
 
 Ne_200.PED_0.CHR_64.NPOP_4.MUT_1.SINGLEPOP_1.ts.chrom_counts – This file is a companion to the genotype file above; it gives the number of loci on each of the 64 chromosomes, in order.  This information is used to restrict comparisons to pairs of loci on different chromosomes.
-![image](https://user-images.githubusercontent.com/5046884/121273708-b2bb0400-c87d-11eb-8fa7-a2b5425d3b58.png)
+
 
 ### Scripts 
 The /scripts folder contains several folders with code to replicate our analysis. We have included Readme.md files for each folder, which are organized by analysis and programming language, https://github.com/nwfsc-cb/pseudorep/tree/main/scripts
@@ -31,5 +31,5 @@ ReadLD.R – This code reads in genotype files in the format of ‘Ne_200.PED_0.
 
 JackLD.R – This code reads in the same pairs of files as does ‘ReadLD.R’, generates new samples, and for each sample computes mean r2 and estimated effective degrees of freedom, using the Jones et al. jackknife method implemented in NeEstimator.    
 
-![image](https://user-images.githubusercontent.com/5046884/121273730-c1092000-c87d-11eb-99d1-b7463425febb.png)
+FstFitting.R contains an example of iterating over multiple model forms to identify the most parsimonious model
 

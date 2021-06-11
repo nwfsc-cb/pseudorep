@@ -5,8 +5,6 @@ Repo for Waples et al. "Pseudoreplication in genomics-scale datasets", Molecular
 ### Simulated data
 Output from our simulations used as input to the regression modeling is found in the data/ foler, https://github.com/nwfsc-cb/pseudorep/tree/main/data
 
-nprimeLD.csv, nprimeFst.csv – these files give the nprime values for LD and Fst, respectively.  These data were used to make many of the tables and figures, and these files were the input data used for developing the models to predict nprime as a function of covariates (Ne, Chr, L, S).
-
 FstNe200.csv – This is an example output file for simulations for Fst with Ne = 200.  Each of the >460K lines gives mean Fst values, averaged over the specified number of loci, for one replicate sample for one pair of populations, for the specified pedigree and mutational replicates.  Both weighted and unweighted Fst values are shown for both Nei and Hudson estimators, under 3 ascertainment schemes.  Most of our analyses used results for weighted Nei Fst and ascertainment = 2 (MAF = 0.05).   
 
 Ne_200.PED_0.CHR_64.NPOP_4.MUT_1.SINGLEPOP_1.ts.geno – This file is an example of simulated genotypes (50K loci for Ne = 200 individuals) that are read in by the file ReadLD.R and used to compute nprime for LD.
